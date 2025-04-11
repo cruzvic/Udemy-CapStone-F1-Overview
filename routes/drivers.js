@@ -1,11 +1,8 @@
 import express from 'express';
 import axios from 'axios';
 
-const app = express();
-const port = 3000;
+const router = express.Router();
 const API_URL = "https://f1api.dev/api/"
-
-app.use(axios);
 
 class Driver {
     constructor(driverId, name, standing, wins, points, championships) {
@@ -32,17 +29,21 @@ let drivers = []
 
 // create driver objects from first api call
 const response = await axios.get(API_URL + "current/drivers-championship");
-response.data.drivers_championship.forEach(driverData => {
-    const d1 = new Driver(
-        driverData.driverId,
-        driverData.driver.shortName,
-        driverData.position,
-        driverData.wins,
-        driverData.points,
-        driverData.championships
-    );
-    drivers.push(d1);
-});
+try {
+    response.data.drivers_championship.forEach(driverData => {
+        const d1 = new Driver(
+            driverData.driverId,
+            driverData.driver.shortName,
+            driverData.position,
+            driverData.wins,
+            driverData.points,
+            driverData.championships
+        );
+        drivers.push(d1);
+    });
+} catch (error) {
+    console.error("Error processing drivers championship data:", error.message);
+}
 
 let numberOfRaces = 0;
 // get all podiums and dnfs of each driver
@@ -126,7 +127,6 @@ drivers.forEach(driver => {
 
 console.log(drivers);
 
+router.get("/", (req, res) => res.render("drivers.ejs", { drivers }));
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-})
+export default router;

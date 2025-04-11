@@ -1,13 +1,14 @@
 {
   "dependencies": {
     "axios": "^1.8.4",
-    "express": "^5.1.0"
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
   },
   "name": "udemy-capstone-f1-overview",
   "version": "1.0.0",
   "description": "Part of udemy webdev course. I'm trying to create a webapp that displays current stats in a concise way.",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
