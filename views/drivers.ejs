@@ -11,6 +11,42 @@
     </header>
     <main>
         <p>Welcome to the F1 Drivers page. Explore the drivers and their details here.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Driver</th>
+                    <th>Wins</th>
+                    <th>Win Percentage</th>
+                    <th>DNFs</th>
+                    <th>Points</th>
+                    <th>Points per Race</th>
+                    <th>Average Race Position</th>
+                    <th>Fastest Laps</th>
+                    <th>Podiums</th>
+                    <th>Poles</th>
+                    <th>Average Qualy Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% drivers.forEach(driver => { %>
+                <tr>
+                    <td><%= driver.standing %></td>
+                    <td><%= driver.name %></td>
+                    <td><%= driver.wins != null ? driver.wins : 0 %></td>
+                    <td><%= driver.winPercentage %></td>
+                    <td><%= driver.dnfs %></td>
+                    <td><%= driver.points %></td>
+                    <td><%= driver.pointsPerRace %></td>
+                    <td><%= driver.avgRacePosition %></td>
+                    <td><%= driver.fastestLaps %></td>
+                    <td><%= driver.podiums%></td>
+                    <td><%= driver.poles%></td>
+                    <td><%= driver.avgQualyPosition%></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>&copy; <%= new Date().getFullYear() %> F1 Overview</p>

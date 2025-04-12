@@ -7,21 +7,21 @@ const API_URL = "https://f1api.dev/api/"
 class Driver {
     constructor(driverId, name, standing, wins, points, championships) {
         this.driverId = driverId;
-        this.name = name;
-        this.standing = standing;
-        this.wins = wins;
-        this.points = points;
+        this.name = name; // done
+        this.standing = standing; // done
+        this.wins = wins; // done
+        this.points = points; // done
         this.championships = championships;
-        this.podiums = 0;
-        this.winPercentage = 0;
-        this.dnfs = 0;
-        this.pointsPerRace = 0;
+        this.podiums = 0; // done
+        this.winPercentage = 0; // done
+        this.dnfs = 0; // done
+        this.pointsPerRace = 0; // done
         this.racePositions = [];
-        this.avgRacePosition = 0;
-        this.fastestLaps = 0;
-        this.poles = 0;
+        this.avgRacePosition = 0; // done
+        this.fastestLaps = 0; // done
+        this.poles = 0; // done
         this.qualyPositions = [];
-        this.avgQualyPosition = 0;
+        this.avgQualyPosition = 0; // done
     }
 }
 
@@ -114,14 +114,14 @@ drivers.forEach(driver => {
         driver.winPercentage = "Not available";
     }
 
-    driver.pointsPerRace = driver.points / numberOfRaces;
+    driver.pointsPerRace = (driver.points / numberOfRaces).toFixed(1);
 
-    driver.avgQualyPosition = driver.qualyPositions.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / driver.qualyPositions.length;
+    driver.avgQualyPosition = (driver.qualyPositions.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / driver.qualyPositions.length).toFixed(1);
 
     if (driver.racePositions.length == 0) {
         driver.avgRacePosition = "Not finished a race yet"
     } else {
-        driver.avgRacePosition = driver.racePositions.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / driver.racePositions.length;
+        driver.avgRacePosition = (driver.racePositions.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / driver.racePositions.length).toFixed(1);
     }
 });
 
