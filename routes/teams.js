@@ -8,17 +8,17 @@ const API_URL = "https://f1api.dev/api/"
 class Team {
     constructor(teamId, name, standing, wins, points, championships) {
         this.teamId = teamId;
-        this.name = name;
-        this.standing = standing;
-        this.wins = wins;
-        this.points = points;
-        this.championships = championships;
-        this.podiums = 0;
+        this.name = name; // done
+        this.standing = standing; // done
+        this.wins = wins; // done
+        this.points = points; // done
+        this.championships = championships; // done
+        this.podiums = 0; // done
         this.winPercentage = 0;
-        this.dnfs = 0;
-        this.pointsPerRace = 0;
-        this.fastestLaps = 0;
-        this.poles = 0;
+        this.dnfs = 0; // done
+        this.pointsPerRace = 0; // done
+        this.fastestLaps = 0; // done
+        this.poles = 0; // done
     }
 }
 

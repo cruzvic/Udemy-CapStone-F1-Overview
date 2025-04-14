@@ -11,6 +11,38 @@
     </header>
     <main>
         <p>Welcome to the F1 Teams page. Explore the teams and their details here.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th>Wins</th>
+                    <th>DNFs</th>
+                    <th>Points</th>
+                    <th>Points per Race</th>
+                    <th>Fastest Laps</th>
+                    <th>Podiums</th>
+                    <th>Poles</th>
+                    <th>Championships</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% teams.forEach(team => { %>
+                <tr>
+                    <td><%= team.standing %></td>
+                    <td><%= team.name %></td>
+                    <td><%= team.wins != null ? team.wins : 0 %></td>
+                    <td><%= team.dnfs %></td>
+                    <td><%= team.points %></td>
+                    <td><%= team.pointsPerRace %></td>
+                    <td><%= team.fastestLaps %></td>
+                    <td><%= team.podiums%></td>
+                    <td><%= team.poles%></td>
+                    <td><%= team.championships != null ? team.championships : 0%></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>&copy; <%= new Date().getFullYear() %> F1 Overview</p>
