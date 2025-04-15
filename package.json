@@ -1,9 +1,11 @@
 {
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
     "axios": "^1.8.4",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "tailwindcss": "^4.1.4"
   },
   "name": "udemy-capstone-f1-overview",
   "version": "1.0.0",
@@ -11,7 +13,8 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch\" \"nodemon app.js\""
   },
   "keywords": [],
   "author": "",

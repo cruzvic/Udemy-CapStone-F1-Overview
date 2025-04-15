@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <h1>Welcome to the F1 Overview!</h1>
+<body class="body-container">
+    <h1 class="h1">Welcome to the F1 Overview!</h1>
     <p>Click on the buttons to view the current Stats Overviews.</p>
-    <form action="/drivers" method="GET">
-        <button type="submit">Drivers</button>
-    </form>
-    <form action="/teams" method="GET">
-        <button type="submit">Teams</button>
-    </form>
+    <div class="flex gap-20">
+        <form action="/drivers">
+            <button class="button-primary">Drivers Overview</button>
+        </form>
+        <form action="/teams">
+            <button class="button-primary">Teams Overview</button>
+        </form>
+    </div>
 </body>
 </html>

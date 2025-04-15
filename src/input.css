@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.list-item-centered {
+    @apply border border-gray-300 py-2 text-center;
+}
+
+.list-header {
+    @apply border border-gray-400 p-4 bg-gray-400;
+}
+
+.h1 {
+    @apply text-3xl font-bold;
+}
+
+.main-container {
+    @apply flex flex-wrap items-center flex-col w-full h-full gap-16;
+}
+
+.table-container {
+    @apply border-collapse border border-gray-400 rounded-full;
+}
+
+.body-container {
+    @apply flex flex-wrap items-center flex-col py-10 gap-16;
+}
+
+.button-primary {
+    @apply bg-red-300 rounded-full py-1 px-3;
+}

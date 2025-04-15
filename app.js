@@ -9,7 +9,7 @@ const port = 3000;
 // Set EJS as the view engine
 app.set("view engine", "ejs");
 
-app.use(express.static("public"));
+app.use(express.static("src"));
 app.use(morgan("dev"));
 app.use((req, res, next) => {
     res.set("Cache-Control", "no-store");

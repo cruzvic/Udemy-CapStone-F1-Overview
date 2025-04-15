@@ -4,45 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
+    <link rel="stylesheet" href="output.css">
 </head>
-<body>
+<body class="body-container">
     <header>
-        <h1>F1 Teams Overview</h1>
+        <h1 class="h1">F1 Teams Overview</h1>
     </header>
-    <main>
+    <main class="main-container">
         <p>Welcome to the F1 Teams page. Explore the teams and their details here.</p>
-        <table>
+        <table class="table-container">
             <thead>
                 <tr>
-                    <th>Position</th>
-                    <th>Team</th>
-                    <th>Wins</th>
-                    <th>DNFs</th>
-                    <th>Points</th>
-                    <th>Points per Race</th>
-                    <th>Fastest Laps</th>
-                    <th>Podiums</th>
-                    <th>Poles</th>
-                    <th>Championships</th>
+                    <th class="list-header">Position</th>
+                    <th class="list-header">Team</th>
+                    <th class="list-header">Wins</th>
+                    <th class="list-header">DNFs</th>
+                    <th class="list-header">Points</th>
+                    <th class="list-header">Points per Race</th>
+                    <th class="list-header">Fastest Laps</th>
+                    <th class="list-header">Podiums</th>
+                    <th class="list-header">Poles</th>
+                    <th class="list-header">Championships</th>
                 </tr>
             </thead>
             <tbody>
                 <% teams.forEach(team => { %>
                 <tr>
-                    <td><%= team.standing %></td>
-                    <td><%= team.name %></td>
-                    <td><%= team.wins != null ? team.wins : 0 %></td>
-                    <td><%= team.dnfs %></td>
-                    <td><%= team.points %></td>
-                    <td><%= team.pointsPerRace %></td>
-                    <td><%= team.fastestLaps %></td>
-                    <td><%= team.podiums%></td>
-                    <td><%= team.poles%></td>
-                    <td><%= team.championships != null ? team.championships : 0%></td>
+                    <td class="list-item-centered"><%= team.standing %></td>
+                    <td class="list-item-centered"><%= team.name %></td>
+                    <td class="list-item-centered"><%= team.wins != null ? team.wins : 0 %></td>
+                    <td class="list-item-centered"><%= team.dnfs %></td>
+                    <td class="list-item-centered"><%= team.points %></td>
+                    <td class="list-item-centered"><%= team.pointsPerRace %></td>
+                    <td class="list-item-centered"><%= team.fastestLaps %></td>
+                    <td class="list-item-centered"><%= team.podiums%></td>
+                    <td class="list-item-centered"><%= team.poles%></td>
+                    <td class="list-item-centered"><%= team.championships != null ? team.championships : 0%></td>
                 </tr>
                 <% }); %>
             </tbody>
         </table>
+        <div class="flex gap-20">
+            <form action="/">
+                <button class="button-primary">Home</button>
+            </form>
+            <form action="/drivers">
+                <button class="button-primary">Drivers Overview</button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>&copy; <%= new Date().getFullYear() %> F1 Overview</p>
