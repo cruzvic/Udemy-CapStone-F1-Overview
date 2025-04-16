@@ -19,7 +19,7 @@ This project is part of the Udemy Complete Web Development Bootcamp. The goal is
     ```bash
     cd Udemy-CapStone-F1-Overview
     ```
-3. Open the `index.html` file in your browser to view the app.
+3. Open the `localhost:3000` in your browser to view the app.
 
 ## Notes
 
