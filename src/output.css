@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-300: oklch(80.8% 0.114 19.571);
-    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --spacing: 0.25rem;
@@ -179,7 +178,7 @@
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: var(--color-gray-300);
-  padding-block: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 2);
   text-align: center;
 }
 .list-header {
@@ -203,6 +202,8 @@
   flex-wrap: wrap;
   align-items: center;
   gap: calc(var(--spacing) * 16);
+  overflow: scroll;
+  padding-inline: calc(var(--spacing) * 16);
 }
 .table-container {
   border-collapse: collapse;
@@ -220,6 +221,7 @@
   padding-block: calc(var(--spacing) * 10);
 }
 .button-primary {
+  cursor: pointer;
   border-radius: calc(infinity * 1px);
   background-color: var(--color-red-300);
   padding-inline: calc(var(--spacing) * 3);

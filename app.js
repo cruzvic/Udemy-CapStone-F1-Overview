@@ -9,8 +9,11 @@ const port = 3000;
 // Set EJS as the view engine
 app.set("view engine", "ejs");
 
+// middlewares
 app.use(express.static("src"));
 app.use(morgan("dev"));
+
+// middleware to turn off caching
 app.use((req, res, next) => {
     res.set("Cache-Control", "no-store");
     next();

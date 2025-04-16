@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
+    <!-- Link to compiled Tailwind CSS file -->
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="body-container">
@@ -12,9 +13,11 @@
     </header>
     <main class="main-container">
         <p>Welcome to the F1 Teams page. Explore the teams and their details here.</p>
+        <!-- Table to display team statistics -->
         <table class="table-container">
             <thead>
                 <tr>
+                    <!-- Table headers -->
                     <th class="list-header">Position</th>
                     <th class="list-header">Team</th>
                     <th class="list-header">Wins</th>
@@ -28,8 +31,10 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Loop through each team to display statistics for each team -->
                 <% teams.forEach(team => { %>
                 <tr>
+                    <!-- Table entries -->
                     <td class="list-item-centered"><%= team.standing %></td>
                     <td class="list-item-centered"><%= team.name %></td>
                     <td class="list-item-centered"><%= team.wins != null ? team.wins : 0 %></td>
@@ -44,6 +49,7 @@
                 <% }); %>
             </tbody>
         </table>
+        <!-- Navigation buttons -->
         <div class="flex gap-20">
             <form action="/">
                 <button class="button-primary">Home</button>

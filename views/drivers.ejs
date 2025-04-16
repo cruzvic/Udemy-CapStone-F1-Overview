@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drivers</title>
+    <!-- Link to compiled Tailwind CSS file -->
     <link rel="stylesheet" href="/output.css">
 </head>
 <body class="body-container">
     <header>
         <h1 class="h1">F1 Drivers Overview</h1>
     </header>
+    <p>Welcome to the F1 Drivers page. Explore the drivers and their details here.</p>
     <main class="main-container">
-        <p>Welcome to the F1 Drivers page. Explore the drivers and their details here.</p>
+        <!-- Table to display driver statistics -->
         <table class="table-container">
             <thead>
-                <tr>
+                <tr> 
+                    <!-- Table headers -->
                     <th class="list-header">Position</th>
                     <th class="list-header">Driver</th>
                     <th class="list-header">Wins</th>
@@ -30,8 +33,10 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Loop through each driver to display statistics for each driver -->
                 <% drivers.forEach(driver => { %>
                 <tr class="m-4">
+                    <!-- Table entries -->
                     <td class="list-item-centered"><%= driver.standing %></td>
                     <td class="list-item-centered"><%= driver.name %></td>
                     <td class="list-item-centered"><%= driver.wins != null ? driver.wins : 0 %></td>
@@ -48,15 +53,17 @@
                 <% }); %>
             </tbody>
         </table>
-        <div class="flex gap-20">
-            <form action="/">
-                <button class="button-primary">Home</button>
-            </form>
-            <form action="/drivers">
-                <button class="button-primary">Drivers Overview</button>
-            </form>
-        </div>
     </main>
+    <!-- Link to compiled Tailwind CSS file -->
+    <!-- Navigation buttons -->
+    <div class="flex gap-20">
+        <form action="/">
+            <button class="button-primary">Home</button>
+        </form>
+        <form action="/drivers">
+            <button class="button-primary">Drivers Overview</button>
+        </form>
+    </div>
     <footer>
         <p>&copy; <%= new Date().getFullYear() %> F1 Overview</p>
     </footer>

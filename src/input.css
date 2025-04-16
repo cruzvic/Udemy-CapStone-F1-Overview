@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .list-item-centered {
-    @apply border border-gray-300 py-2 text-center;
+    @apply border border-gray-300 p-2 text-center;
 }
 
 .list-header {
@@ -13,7 +13,7 @@
 }
 
 .main-container {
-    @apply flex flex-wrap items-center flex-col w-full h-full gap-16;
+    @apply flex flex-wrap items-center flex-col w-full h-full gap-16 px-16 overflow-scroll;
 }
 
 .table-container {
@@ -25,5 +25,5 @@
 }
 
 .button-primary {
-    @apply bg-red-300 rounded-full py-1 px-3;
+    @apply bg-red-300 rounded-full py-1 px-3 cursor-pointer;
 }
