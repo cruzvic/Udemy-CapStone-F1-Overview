@@ -13,13 +13,14 @@ This project is part of the Udemy Complete Web Development Bootcamp. The goal is
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/Udemy-CapStone-F1-Overview.git
+    git clone https://github.com/vichcruz/Udemy-CapStone-F1-Overview.git
     ```
 2. Navigate to the project directory:
     ```bash
     cd Udemy-CapStone-F1-Overview
     ```
-3. Open the `localhost:3000` in your browser to view the app.
+3. Run the command `npm start` in your terminal to start the dev mode.
+4. Open the `localhost:3000` in your browser to view the app.
 
 ## Notes
 
